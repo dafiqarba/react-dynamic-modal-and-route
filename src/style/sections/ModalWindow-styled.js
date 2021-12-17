@@ -15,6 +15,7 @@ export const Close = styled.div`
 
   color: #f1515e;
   background-color: #f9f9f9;
+  z-index: 30;
 
   &:hover {
     cursor: pointer;
@@ -60,7 +61,7 @@ export const Wrapper = styled.div.attrs((props) => ({
   bottom: 0;
 
   transition: all 0.35s ease-in;
-  z-index: 20;
+  z-index: 50;
 
   padding: 1rem 0 1rem 0;
   visibility: ${(props) => (props.state ? props.visible : props.hidden)};

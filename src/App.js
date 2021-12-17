@@ -8,8 +8,10 @@ import { Nav, Header, Main, Footer } from './components/layout';
 import ProfileGenerator from './components/sections/ProfileGenerator';
 import Home from './components/pages/Home';
 import Sidebar from './components/sections/Sidebar';
+import NotFound from 'components/pages/NotFound';
 // From react module
 import { Fragment, useState} from 'react';
+
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -35,9 +37,11 @@ function App() {
           <Main>
             <MainWrapper>
               <Routes>
-                <Route path="/" element={<Navigate replace to="/home" />} />
+                <Route exact path="/" element={<Navigate replace to="/home" />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/generate" element={<ProfileGenerator />} />
+                <Route path="/error" element={<NotFound />} />
+                <Route path="/*" element={<Navigate replace to ="/error" />} />
               </Routes>
             </MainWrapper>
           </Main>

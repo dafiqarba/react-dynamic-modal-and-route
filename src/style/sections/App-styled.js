@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
-  min-height: 100vh;
+  height:100%;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  align-content: space-between;
 `;
 
 const HeaderWrapper = styled.div`

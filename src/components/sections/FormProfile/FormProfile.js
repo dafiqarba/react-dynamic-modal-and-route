@@ -6,7 +6,8 @@ import GeneralInput from './GeneralInput';
 import SelectInput from './SelectInput';
 
 const FormProfile = (props) => {
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState({
+    name: '', birthdate: '', education: '', phone: '', git: '', insta: '', email: '', avatar: '', });
   const [notification, setNotification] = useState(null);
 
   const changeHandler = (event) => {
@@ -34,6 +35,7 @@ const FormProfile = (props) => {
     setNotification(true);
     // Gather all data from input
     props.onSubmitData(userData);
+    setUserData({name: '', birthdate: '', education: '', phone: '', git: '', insta: '', email: '', avatar: '',});
   };
 
   return (
