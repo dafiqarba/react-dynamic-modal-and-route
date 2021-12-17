@@ -1,7 +1,8 @@
 import { Wrapper, Card, CardText, Header, HeaderText, Name } from 'style/sections/ModalWindow-styled';
-import { Batch, Content, DataContainer, DataLabel, Data, Backdrop } from 'style/sections/ModalWindow-styled';
+import { Batch, Content, DataContainer, DataLabel, Data, Backdrop, Close } from 'style/sections/ModalWindow-styled';
 import { Empty } from 'style/sections/ModalWindow-styled';
 import { Fragment } from 'react';
+import { FaTimes } from 'react-icons/fa';
 
 import ModalAvatar from './ModalAvatar';
 import ModalSocialMedia from './ModalSocialMedia';
@@ -11,7 +12,9 @@ function ModalWindow(props) {
 
   return (
     <Fragment>
-      <Backdrop onClick={props.onClose} state={props.modalState} length={dataLength}/>
+      <Backdrop onClick={props.onClose} state={props.modalState} length={dataLength}>
+        <Close><FaTimes/></Close>
+      </Backdrop>
 
       <Wrapper state={props.modalState} length={dataLength}>
         {dataLength === 0 ? (

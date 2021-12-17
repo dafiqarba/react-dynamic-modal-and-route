@@ -8,11 +8,8 @@ import { Nav, Header, Main, Footer } from './components/layout';
 import ProfileGenerator from './components/sections/ProfileGenerator';
 import Home from './components/pages/Home';
 import Sidebar from './components/sections/Sidebar';
-// React.Fragment wrapper
-import { Fragment } from 'react';
-// React Icon
-import { FaHeart } from 'react-icons/fa';
-import { useState } from 'react';
+// From react module
+import { Fragment, useState} from 'react';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -48,7 +45,7 @@ function App() {
           <Footer>
             <FooterWrapper>
               <FooterText>
-                Created with <FaHeart />
+                Created by Dafiq Arba
               </FooterText>
               <FooterText>Powered by React, 2021</FooterText>
             </FooterWrapper>

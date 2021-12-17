@@ -2,25 +2,30 @@ import styled from 'styled-components';
 
 export const Close = styled.div`
   display: flex;
-  height: 4rem;
-  width: 4rem;
-  margin: 1rem 1rem 0 110rem;
-  
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  
+  border-radius: 50%;
+  margin: 3rem 3rem 0 0;
+
   font-size: 3rem;
   font-weight: 600;
-  border-radius: 50%;
-  background-color: #f1515e;
-  color: transparent;
- 
+
+  color: #f1515e;
+  background-color: #f9f9f9;
+
   &:hover {
     cursor: pointer;
   }
 `;
 
 export const Backdrop = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
   position: fixed;
   top: 0;
   left: 0;
